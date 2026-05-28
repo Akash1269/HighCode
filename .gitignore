@@ -2,9 +2,6 @@
 .cache/
 *.lock
 
-# VS Code
-.vscode/
-
 # OS
 .DS_Store
 Thumbs.db
