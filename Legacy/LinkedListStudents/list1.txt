@@ -1,0 +1,41 @@
+10
+1
+csl4
+sasa gray
+85
+1
+csl8
+sasa gray
+87
+2
+csl1
+akash bhayekar
+54
+2
+csl3
+akash bhayekar
+53
+2
+csl4
+akash bhayekar 
+85
+7
+csl5
+pitu mina
+99
+9
+csl4
+asu nike 
+89
+4
+csl2
+nini simon
+57
+5
+csl3
+kikos kol
+86
+6
+csl3
+nimi david
+88
