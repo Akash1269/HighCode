@@ -13,7 +13,10 @@ class Tree
     {
         Node node = new Node() { Data = data };
         if (Root == null)
+        {
             Root = node;
+            return true;
+        }
         bool inserted = false;
         Node temp = Root;
         while (!inserted)
@@ -123,8 +126,8 @@ class Tree
         if (node == null)
             return -1;
         int leftHeight = _Height(node.Left);
-        int RightHeight = _Height(node.Right);
-        return (leftHeight > RightHeight ? leftHeight : RightHeight) + 1;
+        int rightHeight = _Height(node.Right);
+        return (leftHeight > rightHeight ? leftHeight : rightHeight) + 1;
     }
     public int NumLeaves()
     {
@@ -193,6 +196,7 @@ class Tree
 
     public void BFS()
     {
+        if (Root == null) return;
         Queue<Node> q = new Queue<Node>();
         q.Enqueue(Root);
 
@@ -213,6 +217,7 @@ class Tree
 
     public int Breadth()
     {
+        if (Root == null) return 0;
         Queue<Node> q = new Queue<Node>();
         q.Enqueue(Root);
         int max = 0;
@@ -236,8 +241,11 @@ class Tree
 
     public bool Delete(int data)
     {
+        if (Root == null)
+            return false;
+
         Node node = Root;
-        Node prev = Root;
+        Node prev = null;
         bool deleted = false;
         Node newNode = null;
 
@@ -257,7 +265,11 @@ class Tree
             {
                 DeleteNode(ref newNode, node);
                 deleted = true;
-                if (prev.Right != null && prev.Right.Data == node.Data)
+                if (prev == null)
+                {
+                    Root = newNode;
+                }
+                else if (prev.Right != null && prev.Right.Data == node.Data)
                 {
                     prev.Right = newNode;
                 }
@@ -293,10 +305,6 @@ class Tree
             }
             temp.Right = node.Right;
             newNode = node.Left;
-        }
-        if (Root.Data == node.Data)
-        {
-            Root = node.Left;
         }
 
         //Case B: pull out the left most node of the right subtree of node to be deleted and point left subtree to the left

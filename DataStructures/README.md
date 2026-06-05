@@ -1,10 +1,14 @@
 # Data Structures — Interview Prep
 
-A collection of interview prep questions organized by topic. Each file is self-contained and runnable via `dotnet script`.
+A collection of data structure implementations and interview prep questions. Each file is self-contained and runnable via `dotnet script`.
 
 ```powershell
 dotnet script Arrays/TwoSum.csx
 ```
+
+> **Convention:** Files are organized by topic. Each section has two subsections:
+> - **Implementation** — building the DS from scratch
+> - **Problems** — LeetCode/interview questions using that DS
 
 ---
 
@@ -45,17 +49,34 @@ dotnet script Arrays/TwoSum.csx
 
 ## LinkedList
 
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [LinkedList.csx](LinkedList/LinkedList.csx) | Full singly linked list implementation with all operations | `#linkedList` `#sentinel` `#prevPointer` |
+| [LinkedListOperations.csx](LinkedList/LinkedListOperations.csx) | Additional linked list operations: sort, reverse, duplicates | `#linkedList` `#sort` `#reverse` |
+
+### Problems
+
 | File | Question | Tags |
 |---|---|---|
 | [DeleteMiddleNode.csx](LinkedList/DeleteMiddleNode.csx) | Find and delete the middle node (index n/2 ceiling) | `#linkedList` `#twoPointer` |
-| [LinkedList.csx](LinkedList/LinkedList.csx) | Full singly linked list implementation with all operations | `#linkedList` `#sentinel` `#prevPointer` |
-| [LinkedListOperations.csx](LinkedList/LinkedListOperations.csx) | Additional linked list operations: sort, reverse, duplicates | `#linkedList` `#sort` `#reverse` |
 | [LinkedListReverse.csx](LinkedList/LinkedListReverse.csx) | Reverse a singly linked list | `#linkedList` |
 | [OddEvenSeperated.csx](LinkedList/OddEvenSeperated.csx) | Separate odd and even indexed nodes in order | `#linkedList` `#twoPointer` |
+| [TwinListSum.csx](LinkedList/TwinListSum.csx) | Find max sum of twin node pairs in a linked list | `#linkedList` `#twoPointer` `#stack` |
 
 ---
 
 ## Stack
+
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [StackUsingArray.csx](Stack/StackUsingArray.csx) | Stack implementation using a fixed-size array | `#stack` `#implementation` |
+| [StackUsingList.csx](Stack/StackUsingList.csx) | Stack implementation using a linked list | `#stack` `#implementation` |
+
+### Problems
 
 | File | Question | Tags |
 |---|---|---|
@@ -67,6 +88,15 @@ dotnet script Arrays/TwoSum.csx
 
 ## Queue
 
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [QueueUsingArray.csx](Queue/QueueUsingArray.csx) | Circular queue implementation using a fixed-size array | `#queue` `#implementation` |
+| [QueueUsingList.csx](Queue/QueueUsingList.csx) | Queue implementation using a linked list | `#queue` `#implementation` |
+
+### Problems
+
 | File | Question | Tags |
 |---|---|---|
 | [Dota2Senator.csx](Queue/Dota2Senator.csx) | Simulate senate voting to determine winning party | `#queue` |
@@ -75,6 +105,14 @@ dotnet script Arrays/TwoSum.csx
 ---
 
 ## Tree
+
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [BinarySearchTree.csx](Tree/BinarySearchTree.csx) | Full BST: insert, delete, traversals, BFS, height, mirror, copy | `#tree` `#bst` `#implementation` |
+
+### Problems
 
 | File | Question | Tags |
 |---|---|---|
@@ -102,12 +140,14 @@ dotnet script Arrays/TwoSum.csx
 | `#prefixSum` | FidPivotIndex, HighestAltitude |
 | `#slidingWindow` | MaxAvgSubArray1, MaxConsecutivesOnesIII, LongestSubArrayOfOnesDeleteOne, MaxVowelsInSubString |
 | `#matrix` | EqualRowColPairsMatrics |
-| `#stack` | RemoveStarFromString, AstroidCollision, DecodeString |
-| `#queue` | Dota2Senator, RecentCall |
-| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3 |
+| `#stack` | RemoveStarFromString, AstroidCollision, DecodeString, StackUsingArray, StackUsingList |
+| `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList |
+| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3, BinarySearchTree |
+| `#bst` | BinarySearchTree |
 | `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3 |
-| `#bfs` | MaxDepth |
+| `#bfs` | MaxDepth, BinarySearchTree |
 | `#recursive` | GoodNodes, LeafSimilarTrees, MaxDepth |
-| `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated |
+| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree |
+| `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum |
 | `#sentinel` | LinkedList |
 | `#reverse` | LinkedListOperations |

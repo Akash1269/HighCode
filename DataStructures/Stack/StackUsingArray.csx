@@ -12,7 +12,7 @@ class Stack
 
     public bool Push(int data)
     {
-        if (top == 100)
+        if (top == MAX_SIZE)
             return false;
         list[top] = data;
         top++;

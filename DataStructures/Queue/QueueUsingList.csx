@@ -32,6 +32,8 @@ class Queue
 
         int data = Front.Data;
         Front = Front.Next;
+        if (Front == null)
+            Rear = null;
         return data;
     }
 }
