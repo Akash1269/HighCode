@@ -13,6 +13,7 @@ Classic data structure implementations written in C as part of a DSPD (Data Stru
 | [StackUsingArray.c](StackUsingArray.c) | Stack (Array) | Fixed-size array stack with push/pop |
 | [StackUsingLinkedList.c](StackUsingLinkedList.c) | Stack (Linked List) | Linked list-based stack with push/pop |
 | [LinkedListStudents/](LinkedListStudents/) | Linked List (Multi-file) | Student records database with set operations |
+| [ArraryLibrary/](ArraryLibrary/) | Array (Multi-file) | Library management system with set operations |
 
 ## BinarySearchTree.c
 

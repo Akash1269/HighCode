@@ -1,0 +1,11 @@
+5
+
+hjd	da	2000	1
+
+za	da	2005	56
+
+phy	fas	2001	2
+
+za	fas	2009	0
+
+phy	kh	2012	5
