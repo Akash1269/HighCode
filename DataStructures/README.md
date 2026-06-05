@@ -74,6 +74,19 @@ dotnet script Arrays/TwoSum.csx
 
 ---
 
+## Tree
+
+| File | Question | Tags |
+|---|---|---|
+| [GoodNodes.csx](Tree/GoodNodes.csx) | Count good nodes where value >= all ancestors on path to root | `#tree` `#recursive` `#dfs` |
+| [LeafSimilarTrees.csx](Tree/LeafSimilarTrees.csx) | Check if two trees have the same leaf sequence | `#tree` `#recursive` |
+| [MaxDepth.csx](Tree/MaxDepth.csx) | Get max depth of tree from root to leaf | `#tree` `#recursive` `#dfs` `#bfs` |
+| [PathSum1.csx](Tree/PathSum1.csx) | Check if target sum path exists from root to any leaf | `#tree` `#dfs` |
+| [PathSum2.csx](Tree/PathSum2.csx) | Return all root-to-leaf paths that sum to target | `#tree` `#dfs` |
+| [PathSum3.csx](Tree/PathSum3.csx) | Count paths that sum to target (can start from any node) | `#tree` `#dfs` |
+
+---
+
 ## Tag Index
 
 | Tag | Files |
@@ -91,6 +104,10 @@ dotnet script Arrays/TwoSum.csx
 | `#matrix` | EqualRowColPairsMatrics |
 | `#stack` | RemoveStarFromString, AstroidCollision, DecodeString |
 | `#queue` | Dota2Senator, RecentCall |
+| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3 |
+| `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3 |
+| `#bfs` | MaxDepth |
+| `#recursive` | GoodNodes, LeafSimilarTrees, MaxDepth |
 | `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated |
 | `#sentinel` | LinkedList |
 | `#reverse` | LinkedListOperations |
