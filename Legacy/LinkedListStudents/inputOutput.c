@@ -106,12 +106,21 @@ node *createListFromFile(char file_name[]) {
     FILE *fp;
     fp = fopen(file_name, "r");
     if (fp) {
-        fscanf(fp, "%d\n", &n);
+        if (fscanf(fp, "%d\n", &n) != 1) {
+            printf("\nError reading file format\a\n");
+            fclose(fp);
+            return head;
+        }
         for (i = 0; i < n; i++) {
-            fscanf(fp, "%d\n", &s.k.roll);
-            fscanf(fp, "%s\n", s.k.sub_code);
-            fgets(s.name, sizeof(s.name), fp);
-            fscanf(fp, "%d\n", &s.marks);
+            if (fscanf(fp, "%d\n", &s.k.roll) != 1)
+                break;
+            if (fscanf(fp, "%19s\n", s.k.sub_code) != 1)
+                break;
+            if (!fgets(s.name, sizeof(s.name), fp))
+                break;
+            s.name[strcspn(s.name, "\n")] = '\0';
+            if (fscanf(fp, "%d\n", &s.marks) != 1)
+                break;
             head = insertNode(head, s); // link this node to the list
         }
         fclose(fp);

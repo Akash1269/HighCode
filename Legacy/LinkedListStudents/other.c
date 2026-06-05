@@ -91,13 +91,14 @@ void uniqueList(node *head) {
     node *ptr = head;
     node *temp = NULL;
     if (head != NULL) {
-        while (ptr->next != NULL) {
+        while (ptr != NULL && ptr->next != NULL) {
             if (compareKey(ptr->s.k, ptr->next->s.k) == 0) {
                 temp = ptr->next;
                 ptr->next = temp->next;
                 free(temp);
+            } else {
+                ptr = ptr->next;
             }
-            ptr = ptr->next;
         }
     }
 }

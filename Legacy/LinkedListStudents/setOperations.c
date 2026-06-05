@@ -6,8 +6,8 @@
 // union of 2 lists
 node *listUnion(node *list1, node *list2) {
     node *tmp1 = list1, *tmp2 = list2, *list3 = NULL, *nptr, *last;
-    student s0;
-    last = list3 = createNode(s0); // a temp node with random data to be freed
+    student s0 = {0};
+    last = list3 = createNode(s0); // a temp node to be freed
 
     while (tmp1 != NULL && tmp2 != NULL) {
         if (compareKey(tmp1->s.k, tmp2->s.k) == 0) // elements with equal key
@@ -51,8 +51,8 @@ node *listUnion(node *list1, node *list2) {
 // it is the intersection of two lists
 node *listIntersection(node *list1, node *list2) {
     node *tmp1 = list1, *tmp2 = list2, *list3 = NULL, *nptr, *last;
-    student s0;
-    last = list3 = createNode(s0); // a temp node with random data to be freed
+    student s0 = {0};
+    last = list3 = createNode(s0); // a temp node to be freed
 
     while (tmp1 != NULL && tmp2 != NULL) {
         if (compareKey(tmp1->s.k, tmp2->s.k) == 1) // elements with equal key
@@ -80,8 +80,8 @@ node *listIntersection(node *list1, node *list2) {
 // list difference = list1-list2
 node *listDifference(node *list1, node *list2) {
     node *tmp1 = list1, *tmp2 = list2, *list3 = NULL, *nptr, *last;
-    student s0;
-    last = list3 = createNode(s0); // a temp node with random data to be freed
+    student s0 = {0};
+    last = list3 = createNode(s0); // a temp node to be freed
 
     while (tmp1 != NULL && tmp2 != NULL) {
         if (compareKey(tmp1->s.k, tmp2->s.k) == 0) // elements with equal key
@@ -116,8 +116,8 @@ node *listDifference(node *list1, node *list2) {
 // 2 list symmetric differnce = (list1-list2)+(list2-list1)
 node *listSymmetricDifference(node *list1, node *list2) {
     node *tmp1 = list1, *tmp2 = list2, *list3 = NULL, *nptr, *last;
-    student s0;
-    last = list3 = createNode(s0); // a temp node with random data to be freed
+    student s0 = {0};
+    last = list3 = createNode(s0); // a temp node to be freed
 
     while (tmp1 != NULL && tmp2 != NULL) {
         if (compareKey(tmp1->s.k, tmp2->s.k) == 0) // elements with equal key

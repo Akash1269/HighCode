@@ -20,9 +20,13 @@ static int getch(void) {
 #include "password.h"
 
 // for login menu username and password
+// NOTE: credentials are hardcoded for demo purposes only
 status passwordCheck() {
     status sc = FAILURE;
-    char temp[256] = {0}, password[] = "a", name[] = "a", user[10], c;
+    char temp[256] = {0};
+    const char *password = "admin";
+    const char *name = "admin";
+    char user[10], c;
     int i = 0;
     printf("\n\tEnter User Name: ");
     fgets(user, sizeof(user), stdin);
