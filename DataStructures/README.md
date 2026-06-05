@@ -14,6 +14,14 @@ dotnet script Arrays/TwoSum.csx
 
 ## Arrays
 
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [ArrayLibrary.csx](Arrays/ArrayLibrary.csx) | Library management system using array of structs (CRUD, sort, file I/O) | `#array` `#implementation` |
+
+### Problems
+
 | File | Question | Tags |
 |---|---|---|
 | [CanPlaceFlowers.csx](Arrays/CanPlaceFlowers.csx) | Place `n` flowers in a flowerbed without adjacent flowers | `#greedy` |
