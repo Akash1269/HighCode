@@ -47,8 +47,11 @@ dotnet script Arrays/TwoSum.csx
 
 | File | Question | Tags |
 |---|---|---|
+| [DeleteMiddleNode.csx](LinkedList/DeleteMiddleNode.csx) | Find and delete the middle node (index n/2 ceiling) | `#linkedList` `#twoPointer` |
 | [LinkedList.csx](LinkedList/LinkedList.csx) | Full singly linked list implementation with all operations | `#linkedList` `#sentinel` `#prevPointer` |
 | [LinkedListOperations.csx](LinkedList/LinkedListOperations.csx) | Additional linked list operations: sort, reverse, duplicates | `#linkedList` `#sort` `#reverse` |
+| [LinkedListReverse.csx](LinkedList/LinkedListReverse.csx) | Reverse a singly linked list | `#linkedList` |
+| [OddEvenSeperated.csx](LinkedList/OddEvenSeperated.csx) | Separate odd and even indexed nodes in order | `#linkedList` `#twoPointer` |
 
 ---
 
@@ -56,7 +59,18 @@ dotnet script Arrays/TwoSum.csx
 
 | File | Question | Tags |
 |---|---|---|
+| [AstroidCollision.csx](Stack/AstroidCollision.csx) | Return asteroids remaining after all collisions | `#stack` |
+| [DecodeString.csx](Stack/DecodeString.csx) | Decode encoded string `k[encoded_string]` repeated k times | `#stack` |
 | [RemoveStarFromString.csx](Stack/RemoveStarFromString.csx) | Remove stars and nearest non-star character to the left | `#stack` |
+
+---
+
+## Queue
+
+| File | Question | Tags |
+|---|---|---|
+| [Dota2Senator.csx](Queue/Dota2Senator.csx) | Simulate senate voting to determine winning party | `#queue` |
+| [RecentCall.csx](Queue/RecentCall.csx) | Count requests in the last 3000ms time window | `#queue` |
 
 ---
 
@@ -64,7 +78,7 @@ dotnet script Arrays/TwoSum.csx
 
 | Tag | Files |
 |---|---|
-| `#twoPointer` | ContainerWithMostWater, IsSubsequence, MoveZeros, ReverseVowels, StringCompression |
+| `#twoPointer` | ContainerWithMostWater, IsSubsequence, MoveZeros, ReverseVowels, StringCompression, DeleteMiddleNode, OddEvenSeperated |
 | `#greedy` | CanPlaceFlowers |
 | `#hashMap` | MaxSumPairs, DifferenceBetweenTwoArrays, UniqueNumberOfOccurences |
 | `#hashTable` | CloseString |
@@ -75,7 +89,8 @@ dotnet script Arrays/TwoSum.csx
 | `#prefixSum` | FidPivotIndex, HighestAltitude |
 | `#slidingWindow` | MaxAvgSubArray1, MaxConsecutivesOnesIII, LongestSubArrayOfOnesDeleteOne, MaxVowelsInSubString |
 | `#matrix` | EqualRowColPairsMatrics |
-| `#stack` | RemoveStarFromString |
-| `#linkedList` | LinkedList, LinkedListOperations |
+| `#stack` | RemoveStarFromString, AstroidCollision, DecodeString |
+| `#queue` | Dota2Senator, RecentCall |
+| `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated |
 | `#sentinel` | LinkedList |
 | `#reverse` | LinkedListOperations |
