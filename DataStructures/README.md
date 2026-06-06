@@ -63,6 +63,8 @@ dotnet script Arrays/TwoSum.csx
 |---|---|---|
 | [LinkedList.csx](LinkedList/LinkedList.csx) | Full singly linked list implementation with all operations | `#linkedList` `#sentinel` `#prevPointer` |
 | [LinkedListOperations.csx](LinkedList/LinkedListOperations.csx) | Additional linked list operations: sort, reverse, duplicates | `#linkedList` `#sort` `#reverse` |
+| [CircularLinkedList.csx](LinkedList/CircularLinkedList.csx) | Circular linked list implementation with insert, delete, display | `#linkedList` `#circular` `#implementation` |
+| [DoublyLinkedList.csx](LinkedList/DoublyLinkedList.csx) | Doubly linked list implementation with forward/backward traversal | `#linkedList` `#doubly` `#implementation` |
 
 ### Problems
 
@@ -130,6 +132,8 @@ dotnet script Arrays/TwoSum.csx
 | [PathSum1.csx](Tree/PathSum1.csx) | Check if target sum path exists from root to any leaf | `#tree` `#dfs` |
 | [PathSum2.csx](Tree/PathSum2.csx) | Return all root-to-leaf paths that sum to target | `#tree` `#dfs` |
 | [PathSum3.csx](Tree/PathSum3.csx) | Count paths that sum to target (can start from any node) | `#tree` `#dfs` |
+| [LCAOfTwoNodes.csx](Tree/LCAOfTwoNodes.csx) | Find the lowest common ancestor of two given nodes | `#tree` `#dfs` `#lca` |
+| [ZigZagMaxLength.csx](Tree/ZigZagMaxLength.csx) | Find longest path alternating between left and right child | `#tree` `#dfs` |
 
 ---
 
@@ -150,12 +154,15 @@ dotnet script Arrays/TwoSum.csx
 | `#matrix` | EqualRowColPairsMatrics |
 | `#stack` | RemoveStarFromString, AstroidCollision, DecodeString, StackUsingArray, StackUsingList |
 | `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList |
-| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3, BinarySearchTree |
+| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, BinarySearchTree |
 | `#bst` | BinarySearchTree |
-| `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3 |
+| `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength |
 | `#bfs` | MaxDepth, BinarySearchTree |
 | `#recursive` | GoodNodes, LeafSimilarTrees, MaxDepth |
-| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree |
-| `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum |
+| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList |
+| `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum, CircularLinkedList, DoublyLinkedList |
+| `#lca` | LCAOfTwoNodes |
+| `#circular` | CircularLinkedList |
+| `#doubly` | DoublyLinkedList |
 | `#sentinel` | LinkedList |
 | `#reverse` | LinkedListOperations |
