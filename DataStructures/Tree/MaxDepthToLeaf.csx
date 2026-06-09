@@ -1,8 +1,9 @@
-// question - Get max depth of tree from root to leaf
+// Question - Given the root of a binary tree, return its maximum depth.
+// A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 // #tree #recursive #dfs #bfs #stack #queue
 
-// Simple recursive solution to increase depth on each return
+// Solution 1 : Most intuitive and simple, go till leaf and return adding 1 after each call to know depth
 public int MaxDepthLoop(TreeNode root)
 {
     return GetMaxDepth(root, 0);
@@ -18,7 +19,7 @@ public int GetMaxDepth(TreeNode root, int depth)
     return Math.Max(left, right);
 }
 
-// Without using depth
+// Solution 2 : Without using depth
 public int MaxDepthRecursive(TreeNode root)
 {
     if (root == null) return 0;
@@ -29,7 +30,7 @@ public int MaxDepthRecursive(TreeNode root)
     return Math.Max(left, right) + 1;
 }
 
-// Non recursive solution using loops Using BFS and Queue
+// Solution 3 : Using queue we can do BFS, and track depth by doing outer loop count on how many level we went deep
 public int MaxDepthBFS(TreeNode root)
 {
     if (root == null) return 0;
@@ -56,14 +57,13 @@ public int MaxDepthBFS(TreeNode root)
     return depth;
 }
 
-// Non recursive using loops, DFS, Stack
+// Solution 4 : Using stock we can do DFS, but save depth var along with element to track what depth we went.
 public int MaxDepthDFS(TreeNode root)
 {
     int max = 0;
 
     var stack = new Stack<(TreeNode, int)>();
     stack.Push((root, 1));
-
 
     while (stack.Count > 0)
     {
@@ -77,4 +77,3 @@ public int MaxDepthDFS(TreeNode root)
 
     return max;
 }
-

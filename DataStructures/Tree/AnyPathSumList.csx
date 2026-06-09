@@ -1,23 +1,10 @@
-// Question - If target sum is present from root to any leaf, return true if found
+// Question - Given the root of a binary tree and an integer targetSum, 
+// return the number of paths where the sum of the values along the path equals targetSum.
+// The path does not need to start or end at the root or a leaf
 
 // #tree #dfs
 
-// Simple intuitive solution
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-
-// More intuitive and simple using list to find out if any sum of list to root on all elements match target sum
+// Solution 1 : More intuitive and simple using list to find out if any sum of list to root on all elements match target sum
 // Take more time complexity to everytime check sum from element to root
 public int PathSum(TreeNode root, int targetSum)
 {
@@ -45,8 +32,7 @@ public int PathSumCount(TreeNode root, int targetSum, IList<int> list)
     return count;
 }
 
-// Optimized using stored map of prefix sum to see if we can remove any prefix to match
-
+// Solution 2 : Optimized using stored map of prefix sum to see if we can remove any prefix to match
 public int PathSum(TreeNode root, int targetSum)
 {
     // 0 is added to check for matching target sum from root to this node as simplicity purpose

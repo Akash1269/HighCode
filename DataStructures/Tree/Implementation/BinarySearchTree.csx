@@ -1,3 +1,29 @@
+// Binary Search Tree — Full Implementation
+// A BST where left < node < right. Supports CRUD, traversals, and tree properties.
+//
+// #tree #bst #implementation
+//
+// Basics:
+//   Insert(int data)      → Insert node maintaining BST property. Returns false if duplicate.
+//   Delete(int data)      → Remove node and restructure tree. Returns false if not found.
+//   FindNode(int data)    → Iterative search. Returns true if value exists.
+//
+// Traversals:
+//   PreOrder()            → Root → Left → Right (useful for serialization/copy)
+//   InOrder()             → Left → Root → Right (gives sorted order for BST)
+//   PostOrder()           → Left → Right → Root (useful for deletion/evaluation)
+//   BFS()                 → Level-order traversal using Queue
+//
+// Tree Properties:
+//   Height()              → Longest path (edges) from root to leaf. Empty tree = -1.
+//   NumOfNodes()          → Total node count
+//   NumLeaves()           → Count of leaf nodes (no children)
+//   Breadth()             → Max number of nodes at any single level
+//
+// Transformations:
+//   MirrorImage()         → Swap left/right children recursively (in-place)
+//   TreeCopy()            → Deep copy the tree and print in-order
+
 class Tree
 {
     class Node
