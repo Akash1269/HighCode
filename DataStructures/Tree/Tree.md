@@ -106,10 +106,11 @@ int Solve(TreeNode root) {
 **Applied in:**
 | File | Problem | What's Aggregated |
 |------|---------|-------------------|
-| `MaxDepth.csx` | Max depth of tree | `Math.Max(left, right) + 1` |
-| `GoodNodes.csx` | Count good nodes | `left_count + right_count + IsGoodNode` |
+| `MaxDepthToLeaf.csx` | Max depth of tree | `Math.Max(left, right) + 1` |
+| `MinDepthToLeaf.csx` | Min depth to nearest leaf | `Math.Min(left, right) + 1` (only valid paths) |
+| `GoodNodesCount.csx` | Count good nodes | `left_count + right_count + IsGoodNode` |
 | `LCAOfTwoNodes.csx` | Lowest common ancestor | `(foundP, foundQ)` tuples bubbled up |
-| `LeafSimilarTrees.csx` | Collect leaf values | Leaves appended to list via DFS |
+| `SimilarLeavesTrees.csx` | Collect leaf values | Leaves appended to list via DFS |
 | `BinarySearchTree.csx` | NumOfNodes, Height, NumLeaves | Count/height aggregated from subtrees |
 
 ---
@@ -136,11 +137,13 @@ void Solve(TreeNode root, int state) {
 **Applied in:**
 | File | Problem | State Passed Down |
 |------|---------|-------------------|
-| `GoodNodes.csx` | Count good nodes | `max` value seen on path from root |
-| `PathSum1.csx` | Has path sum (root to leaf) | `targetSum` decremented at each node |
-| `PathSum2.csx` | All paths with target sum | `targetSum` + current path list |
-| `MaxDepth.csx` | Max depth (loop variant) | `depth` counter incremented |
-| `ZigZagMaxLength.csx` | Longest ZigZag path | `left` and `right` zigzag lengths |
+| `GoodNodesCount.csx` | Count good nodes | `max` value seen on path from root |
+| `PathToLeafSum.csx` | Has path sum (root to leaf) | `targetSum` decremented at each node |
+| `PathSumList.csx` | All paths with target sum | `targetSum` + current path list |
+| `MaxDepthToLeaf.csx` | Max depth (loop variant) | `depth` counter incremented |
+| `ZigZagPathMaxLength.csx` | Longest ZigZag path | `left` and `right` zigzag lengths |
+| `AreTwoNodesCousins.csx` | Check if two nodes are cousins | `depth` passed down to compare levels |
+| `BSTSearch.csx` | Search node in BST | BST property narrows search direction |
 
 ---
 
@@ -165,9 +168,9 @@ void Solve(TreeNode root, List<int> path) {
 **Applied in:**
 | File | Problem | What's Backtracked |
 |------|---------|-------------------|
-| `PathSum2.csx` | All root-to-leaf paths matching sum | `list.RemoveAt(list.Count - 1)` |
-| `PathSum3.csx` (list approach) | Count paths from any node | `list.RemoveAt(list.Count - 1)` |
-| `PathSum3.csx` (prefix sum approach) | Count paths using prefix map | `map[currentSum]` decremented/removed |
+| `PathSumList.csx` | All root-to-leaf paths matching sum | `list.RemoveAt(list.Count - 1)` |
+| `AnyPathSumList.csx` (list approach) | Count paths from any node | `list.RemoveAt(list.Count - 1)` |
+| `AnyPathSumList.csx` (prefix sum approach) | Count paths using prefix map | `map[currentSum]` decremented/removed |
 
 ---
 
@@ -194,7 +197,7 @@ int Solve(TreeNode root, long currentSum, int target, Dictionary<long, int> map)
 **Applied in:**
 | File | Problem | Details |
 |------|---------|---------|
-| `PathSum3.csx` | Count all paths with target sum (any start/end) | `Dictionary<long, int>` with `{0, 1}` seed |
+| `AnyPathSumList.csx` | Count all paths with target sum (any start/end) | `Dictionary<long, int>` with `{0, 1}` seed |
 
 ---
 
@@ -223,8 +226,15 @@ while (queue.Count > 0) {
 **Applied in:**
 | File | Problem | Details |
 |------|---------|---------|
-| `MaxDepth.csx` | Max depth using BFS | Count levels until queue is empty |
+| `MaxDepthToLeaf.csx` | Max depth using BFS | Count levels until queue is empty |
 | `BinarySearchTree.csx` | BFS traversal, Breadth of tree | Level-order print, max queue size = breadth |
+| `AvgOfLevels.csx` | Average of each level | Sum nodes per level, divide by level count |
+| `LevelOrderTraverse.csx` | Level order as list of lists | Collect each level into separate list |
+| `LevelOrderBottomUpTraverse.csx` | Bottom-up level order | Same as above, insert at index 0 to reverse |
+| `MaxSumLevel.csx` | Level with maximum sum | Track sum per level, return level with max |
+| `ZigZagLevelTraverse.csx` | Zigzag level order | BFS + reverse alternate levels |
+| `AreTwoNodesCousins.csx` | Check if cousins (BFS approach) | Level-by-level check for same depth, different parent |
+| `ReplaceCousinsSum.csx` | Replace values with cousin sums | BFS with level sum minus sibling sum |
 
 ---
 
@@ -237,7 +247,7 @@ while (queue.Count > 0) {
 **Applied in:**
 | File | Problem | Stack Stores |
 |------|---------|-------------|
-| `MaxDepth.csx` | Max depth using DFS | `(TreeNode, int depth)` tuples |
+| `MaxDepthToLeaf.csx` | Max depth using DFS | `(TreeNode, int depth)` tuples |
 | `BinarySearchTree.csx` | FindNode (iterative BST search) | Implicit via while loop |
 
 ---
@@ -261,7 +271,7 @@ void Solve(TreeNode root, int leftCount, int rightCount) {
 **Applied in:**
 | File | Problem | Details |
 |------|---------|---------|
-| `ZigZagMaxLength.csx` | Longest ZigZag path | Three approaches: brute force, direction tracking, dual-counter |
+| `ZigZagPathMaxLength.csx` | Longest ZigZag path | Three approaches: brute force, direction tracking, dual-counter |
 
 ---
 
@@ -269,14 +279,23 @@ void Solve(TreeNode root, int leftCount, int rightCount) {
 
 | Level | Problem | Key Pattern |
 |-------|---------|-------------|
-| Easy | MaxDepth | Recursive DFS aggregation |
-| Easy | LeafSimilarTrees | DFS leaf collection |
-| Easy | PathSum1 | DFS with state (target sum) |
-| Medium | GoodNodes | DFS with state (max tracking) |
-| Medium | PathSum2 | DFS + Backtracking |
+| Easy | MaxDepthToLeaf | Recursive DFS aggregation |
+| Easy | MinDepthToLeaf | Recursive DFS aggregation (handle single-child) |
+| Easy | SimilarLeavesTrees | DFS leaf collection |
+| Easy | PathToLeafSum | DFS with state (target sum) |
+| Easy | BSTSearch | Top-down DFS using BST property |
+| Easy | AvgOfLevels | BFS level-order |
+| Easy | LevelOrderTraverse | BFS level-order |
+| Easy | LevelOrderBottomUpTraverse | BFS level-order |
+| Medium | GoodNodesCount | DFS with state (max tracking) |
+| Medium | PathSumList | DFS + Backtracking |
 | Medium | LCAOfTwoNodes | DFS with boolean return aggregation |
-| Medium | ZigZagMaxLength | Dual recursion with direction tracking |
-| Hard | PathSum3 | Prefix Sum + Backtracking on tree |
+| Medium | ZigZagPathMaxLength | Dual recursion with direction tracking |
+| Medium | AreTwoNodesCousins | BFS level-order + sibling check |
+| Medium | MaxSumLevel | BFS level-order |
+| Medium | ZigZagLevelTraverse | BFS + alternate reversal |
+| Medium | ReplaceCousinsSum | BFS with level sum tracking |
+| Hard | AnyPathSumList | Prefix Sum + Backtracking on tree |
 
 ---
 
@@ -289,6 +308,7 @@ void Solve(TreeNode root, int leftCount, int rightCount) {
 | Need to collect/track full paths | Backtracking |
 | Need subpath sums from any node to any descendant | Prefix Sum |
 | Need level-by-level processing or shortest depth | BFS with Queue |
+| Need to find level-based aggregates (avg, sum, max) | BFS with Queue |
 | Need to avoid recursion / control traversal explicitly | Iterative DFS with Stack |
 | Need alternating direction logic | Dual Recursion with Direction Tracking |
 
@@ -305,10 +325,11 @@ These are commonly asked in interviews and LeetCode. Listed here for awareness a
    - Problems: Same Tree, Symmetric Tree, Subtree of Another Tree
 
 9. **BST Property Exploitation (Inorder = Sorted)**
-   - "Inorder traversal of a BST gives sorted order — use this to validate, find kth, or range query"
-   - Use when: Validate BST, find kth smallest/largest, convert BST to sorted list, range sum
+   - "Inorder traversal of a BST gives sorted order — use this to validate, find kth, or range query. Search uses left/right comparison to narrow in O(log n)"
+   - Use when: Validate BST, find kth smallest/largest, search, convert BST to sorted list, range sum
    - Think: "Can I use the sorted property of BST inorder?"
-   - Problems: Validate BST, Kth Smallest in BST, Convert BST to Greater Tree
+   - Practiced: `BSTSearch.csx`
+   - Remaining: Validate BST, Kth Smallest in BST, Convert BST to Greater Tree
 
 10. **Diameter / Longest Path Between Any Two Nodes**
     - "At each node, the longest path THROUGH it = leftHeight + rightHeight. Track global max"

@@ -120,28 +120,29 @@ dotnet script Arrays/TwoSum.csx
 
 | File | Description | Tags |
 |---|---|---|
-| [BinarySearchTree.csx](Tree/BinarySearchTree.csx) | Full BST: insert, delete, traversals, BFS, height, mirror, copy | `#tree` `#bst` `#implementation` |
+| [BinarySearchTree.csx](Tree/Implementation/BinarySearchTree.csx) | Full BST: insert, delete, traversals, BFS, height, mirror, copy | `#tree` `#bst` `#implementation` |
 
 ### Problems
 
 | File | Question | Tags |
 |---|---|---|
-| [GoodNodes.csx](Tree/GoodNodes.csx) | Count good nodes where value >= all ancestors on path to root | `#tree` `#recursive` `#dfs` |
-| [LeafSimilarTrees.csx](Tree/LeafSimilarTrees.csx) | Check if two trees have the same leaf sequence | `#tree` `#recursive` |
-| [MaxDepth.csx](Tree/MaxDepth.csx) | Get max depth of tree from root to leaf | `#tree` `#recursive` `#dfs` `#bfs` |
-| [PathSum1.csx](Tree/PathSum1.csx) | Check if target sum path exists from root to any leaf | `#tree` `#dfs` |
-| [PathSum2.csx](Tree/PathSum2.csx) | Return all root-to-leaf paths that sum to target | `#tree` `#dfs` |
-| [PathSum3.csx](Tree/PathSum3.csx) | Count paths that sum to target (can start from any node) | `#tree` `#dfs` |
+| [GoodNodesCount.csx](Tree/GoodNodesCount.csx) | Count good nodes where value >= all ancestors on path to root | `#tree` `#recursive` `#dfs` |
+| [SimilarLeavesTrees.csx](Tree/SimilarLeavesTrees.csx) | Check if two trees have the same leaf sequence | `#tree` `#recursive` |
+| [MaxDepthToLeaf.csx](Tree/MaxDepthToLeaf.csx) | Get max depth of tree from root to leaf | `#tree` `#recursive` `#dfs` `#bfs` `#stack` `#queue` |
+| [MinDepthToLeaf.csx](Tree/MinDepthToLeaf.csx) | Find minimum depth (shortest root-to-leaf path) | `#recursion` `#tree` |
+| [PathToLeafSum.csx](Tree/PathToLeafSum.csx) | Check if target sum path exists from root to any leaf | `#tree` `#dfs` |
+| [PathSumList.csx](Tree/PathSumList.csx) | Return all root-to-leaf paths that sum to target | `#tree` `#dfs` |
+| [AnyPathSumList.csx](Tree/AnyPathSumList.csx) | Count paths that sum to target (can start from any node) | `#tree` `#dfs` |
 | [LCAOfTwoNodes.csx](Tree/LCAOfTwoNodes.csx) | Find the lowest common ancestor of two given nodes | `#tree` `#dfs` `#lca` |
-| [ZigZagMaxLength.csx](Tree/ZigZagMaxLength.csx) | Find longest path alternating between left and right child | `#tree` `#dfs` |
-| [Cousins.csx](Tree/Cousins.csx) | Check if two nodes are cousins (same depth, different parents) | `#tree` `#recursive` `#dfs` `#bfs` |
-| [LevelAvg.csx](Tree/LevelAvg.csx) | Find average of each level and return as a list | `#tree` `#bfs` `#queue` |
-| [LevelOrder.csx](Tree/LevelOrder.csx) | Return level order traversal as list of lists | `#bfs` `#tree` `#queue` |
-| [LevelOrder2.csx](Tree/LevelOrder2.csx) | Return level order traversal bottom-up as list of lists | `#bfs` `#tree` `#queue` |
-| [MaxDepthIterative.csx](Tree/MaxDepthIterative.csx) | Return maximum depth of a binary tree | `#recursion` `#tree` `#stack` `#queue` |
-| [MinDepth.csx](Tree/MinDepth.csx) | Return minimum depth (shortest root-to-leaf path) | `#recursion` `#tree` |
-| [MaxLevelSum.csx](Tree/MaxLevelSum.csx) | Find level with maximum sum | `#tree` `#bfs` `#queue` |
-| [ZigZagLevel.csx](Tree/ZigZagLevel.csx) | Return zigzag level order traversal | `#tree` `#bfs` `#queue` |
+| [ZigZagPathMaxLength.csx](Tree/ZigZagPathMaxLength.csx) | Find longest path alternating between left and right child | `#tree` `#dfs` |
+| [AreTwoNodesCousins.csx](Tree/AreTwoNodesCousins.csx) | Check if two nodes are cousins (same depth, different parents) | `#tree` `#recursive` `#dfs` `#bfs` |
+| [AvgOfLevels.csx](Tree/AvgOfLevels.csx) | Find average of each level and return as a list | `#tree` `#bfs` `#queue` |
+| [LevelOrderTraverse.csx](Tree/LevelOrderTraverse.csx) | Return level order traversal as list of lists | `#bfs` `#tree` `#queue` |
+| [LevelOrderBottomUpTraverse.csx](Tree/LevelOrderBottomUpTraverse.csx) | Return level order traversal bottom-up as list of lists | `#bfs` `#tree` `#queue` |
+| [MaxSumLevel.csx](Tree/MaxSumLevel.csx) | Find level with maximum sum | `#bfs` `#tree` `#queue` |
+| [ZigZagLevelTraverse.csx](Tree/ZigZagLevelTraverse.csx) | Return zigzag level order traversal | `#zigzag` `#bfs` `#queue` `#tree` |
+| [ReplaceCousinsSum.csx](Tree/ReplaceCousinsSum.csx) | Replace node values with sum of all cousins' values | `#tree` `#recursive` `#bfs` |
+| [BSTSearch.csx](Tree/BSTSearch.csx) | Find node in BST and return subtree | `#bst` `#recursive` `#dfs` |
 
 ---
 
@@ -161,12 +162,12 @@ dotnet script Arrays/TwoSum.csx
 | `#slidingWindow` | MaxAvgSubArray1, MaxConsecutivesOnesIII, LongestSubArrayOfOnesDeleteOne, MaxVowelsInSubString |
 | `#matrix` | EqualRowColPairsMatrics |
 | `#stack` | RemoveStarFromString, AstroidCollision, DecodeString, StackUsingArray, StackUsingList |
-| `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList, LevelAvg, LevelOrder, LevelOrder2, MaxLevelSum, ZigZagLevel |
-| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, BinarySearchTree, Cousins, LevelAvg, LevelOrder, LevelOrder2, MaxDepthIterative, MinDepth, MaxLevelSum, ZigZagLevel |
-| `#bst` | BinarySearchTree |
-| `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, Cousins |
-| `#bfs` | MaxDepth, BinarySearchTree, Cousins, LevelAvg, LevelOrder, LevelOrder2, MaxLevelSum, ZigZagLevel |
-| `#recursive` | GoodNodes, LeafSimilarTrees, MaxDepth, Cousins |
+| `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, MaxDepthToLeaf |
+| `#tree` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, MinDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, BSTSearch |
+| `#bst` | BinarySearchTree, BSTSearch |
+| `#dfs` | GoodNodesCount, MaxDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, AreTwoNodesCousins, BSTSearch |
+| `#bfs` | MaxDepthToLeaf, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum |
+| `#recursive` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, AreTwoNodesCousins, ReplaceCousinsSum, BSTSearch |
 | `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList |
 | `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum, CircularLinkedList, DoublyLinkedList |
 | `#lca` | LCAOfTwoNodes |
@@ -174,4 +175,5 @@ dotnet script Arrays/TwoSum.csx
 | `#doubly` | DoublyLinkedList |
 | `#sentinel` | LinkedList |
 | `#reverse` | LinkedListOperations |
-| `#recursion` | MaxDepthIterative, MinDepth |
+| `#recursion` | MinDepthToLeaf |
+| `#zigzag` | ZigZagLevelTraverse |
