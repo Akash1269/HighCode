@@ -16,7 +16,7 @@ public bool IsCousins2(TreeNode root, int x, int y)
 // Be careful to cross out same parent issue. To be cousion they should not have same parent
 public (int, int) GetCousinDepth(TreeNode root, int x, int y, int depth)
 {
-    if (root == null || hasSameParent(root, x, y)) return (0, 0);
+    if (root == null || IsSibling(root, x, y)) return (0, 0);
 
     if (root.val == x) return (depth, 0);
     if (root.val == y) return (0, depth);
@@ -27,7 +27,7 @@ public (int, int) GetCousinDepth(TreeNode root, int x, int y, int depth)
     return (Math.Max(x1, x2), Math.Max(y1, y2));
 }
 
-public bool hasSameParent(TreeNode root, int x, int y)
+public bool IsSibling(TreeNode root, int x, int y)
 {
     if (root.left == null || root.right == null) return false;
 
@@ -55,7 +55,7 @@ public bool IsCousins(TreeNode root, int x, int y)
         {
             var node = queue.Dequeue();
 
-            if (hasSameParent(node, x, y)) return false;
+            if (IsSibling(node, x, y)) return false;
 
             if (node.val == x) foundX = true;
             if (node.val == y) foundY = true;

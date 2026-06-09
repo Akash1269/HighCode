@@ -134,12 +134,14 @@ dotnet script Arrays/TwoSum.csx
 | [PathSum3.csx](Tree/PathSum3.csx) | Count paths that sum to target (can start from any node) | `#tree` `#dfs` |
 | [LCAOfTwoNodes.csx](Tree/LCAOfTwoNodes.csx) | Find the lowest common ancestor of two given nodes | `#tree` `#dfs` `#lca` |
 | [ZigZagMaxLength.csx](Tree/ZigZagMaxLength.csx) | Find longest path alternating between left and right child | `#tree` `#dfs` |
-| [BinaryTreeCousins.csx](Tree/BinaryTreeCousins.csx) | Check if two nodes are cousins (same depth, different parents) | `#tree` `#recursive` `#dfs` `#bfs` |
-| [BinaryTreeLevelAvg.csx](Tree/BinaryTreeLevelAvg.csx) | Find average of each level and return as a list | `#tree` `#bfs` `#queue` |
-| [BinaryTreeLevelOrder.csx](Tree/BinaryTreeLevelOrder.csx) | Return level order traversal as list of lists | `#bfs` `#tree` `#queue` |
-| [BinaryTreeLevelOrder2.csx](Tree/BinaryTreeLevelOrder2.csx) | Return level order traversal bottom-up as list of lists | `#bfs` `#tree` `#queue` |
-| [BinaryTreeMaxDepth.csx](Tree/BinaryTreeMaxDepth.csx) | Return maximum depth of a binary tree | `#recursion` `#tree` `#stack` `#queue` |
-| [BinaryTreeMinDepth.csx](Tree/BinaryTreeMinDepth.csx) | Return minimum depth (shortest root-to-leaf path) | `#recursion` `#tree` |
+| [Cousins.csx](Tree/Cousins.csx) | Check if two nodes are cousins (same depth, different parents) | `#tree` `#recursive` `#dfs` `#bfs` |
+| [LevelAvg.csx](Tree/LevelAvg.csx) | Find average of each level and return as a list | `#tree` `#bfs` `#queue` |
+| [LevelOrder.csx](Tree/LevelOrder.csx) | Return level order traversal as list of lists | `#bfs` `#tree` `#queue` |
+| [LevelOrder2.csx](Tree/LevelOrder2.csx) | Return level order traversal bottom-up as list of lists | `#bfs` `#tree` `#queue` |
+| [MaxDepthIterative.csx](Tree/MaxDepthIterative.csx) | Return maximum depth of a binary tree | `#recursion` `#tree` `#stack` `#queue` |
+| [MinDepth.csx](Tree/MinDepth.csx) | Return minimum depth (shortest root-to-leaf path) | `#recursion` `#tree` |
+| [MaxLevelSum.csx](Tree/MaxLevelSum.csx) | Find level with maximum sum | `#tree` `#bfs` `#queue` |
+| [ZigZagLevel.csx](Tree/ZigZagLevel.csx) | Return zigzag level order traversal | `#tree` `#bfs` `#queue` |
 
 ---
 
@@ -159,12 +161,12 @@ dotnet script Arrays/TwoSum.csx
 | `#slidingWindow` | MaxAvgSubArray1, MaxConsecutivesOnesIII, LongestSubArrayOfOnesDeleteOne, MaxVowelsInSubString |
 | `#matrix` | EqualRowColPairsMatrics |
 | `#stack` | RemoveStarFromString, AstroidCollision, DecodeString, StackUsingArray, StackUsingList |
-| `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList, BinaryTreeLevelAvg, BinaryTreeLevelOrder, BinaryTreeLevelOrder2 |
-| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, BinarySearchTree, BinaryTreeCousins, BinaryTreeLevelAvg, BinaryTreeLevelOrder, BinaryTreeLevelOrder2, BinaryTreeMaxDepth, BinaryTreeMinDepth |
+| `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList, LevelAvg, LevelOrder, LevelOrder2, MaxLevelSum, ZigZagLevel |
+| `#tree` | GoodNodes, LeafSimilarTrees, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, BinarySearchTree, Cousins, LevelAvg, LevelOrder, LevelOrder2, MaxDepthIterative, MinDepth, MaxLevelSum, ZigZagLevel |
 | `#bst` | BinarySearchTree |
-| `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, BinaryTreeCousins |
-| `#bfs` | MaxDepth, BinarySearchTree, BinaryTreeCousins, BinaryTreeLevelAvg, BinaryTreeLevelOrder, BinaryTreeLevelOrder2 |
-| `#recursive` | GoodNodes, LeafSimilarTrees, MaxDepth, BinaryTreeCousins |
+| `#dfs` | GoodNodes, MaxDepth, PathSum1, PathSum2, PathSum3, LCAOfTwoNodes, ZigZagMaxLength, Cousins |
+| `#bfs` | MaxDepth, BinarySearchTree, Cousins, LevelAvg, LevelOrder, LevelOrder2, MaxLevelSum, ZigZagLevel |
+| `#recursive` | GoodNodes, LeafSimilarTrees, MaxDepth, Cousins |
 | `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList |
 | `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum, CircularLinkedList, DoublyLinkedList |
 | `#lca` | LCAOfTwoNodes |
@@ -172,4 +174,4 @@ dotnet script Arrays/TwoSum.csx
 | `#doubly` | DoublyLinkedList |
 | `#sentinel` | LinkedList |
 | `#reverse` | LinkedListOperations |
-| `#recursion` | BinaryTreeMaxDepth, BinaryTreeMinDepth |
+| `#recursion` | MaxDepthIterative, MinDepth |
