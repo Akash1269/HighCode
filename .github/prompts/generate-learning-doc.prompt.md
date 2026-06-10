@@ -1,3 +1,4 @@
+
 ---
 description: Generate a learning doc for a data structure folder
 mode: agent

@@ -19,10 +19,6 @@
 //   NumOfNodes()          → Total node count
 //   NumLeaves()           → Count of leaf nodes (no children)
 //   Breadth()             → Max number of nodes at any single level
-//
-// Transformations:
-//   MirrorImage()         → Swap left/right children recursively (in-place)
-//   TreeCopy()            → Deep copy the tree and print in-order
 
 class Tree
 {
@@ -38,11 +34,13 @@ class Tree
     public bool Insert(int data)
     {
         Node node = new Node() { Data = data };
+
         if (Root == null)
         {
             Root = node;
             return true;
         }
+
         bool inserted = false;
         Node temp = Root;
         while (!inserted)
@@ -76,6 +74,7 @@ class Tree
                 return false;
             }
         }
+
         return true;
     }
 
@@ -137,8 +136,7 @@ class Tree
 
     int _NumOfNodes(Node node)
     {
-        if (node == null)
-            return 0;
+        if (node == null) return 0;
         return _NumOfNodes(node.Left) + _NumOfNodes(node.Right) + 1;
     }
 
@@ -149,12 +147,14 @@ class Tree
 
     int _Height(Node node)
     {
-        if (node == null)
-            return -1;
+        if (node == null) return 0;
+
         int leftHeight = _Height(node.Left);
         int rightHeight = _Height(node.Right);
-        return (leftHeight > rightHeight ? leftHeight : rightHeight) + 1;
+
+        return Math.Max(leftHeight, rightHeight) + 1;
     }
+
     public int NumLeaves()
     {
         return _NumLeaves(Root);
@@ -162,40 +162,11 @@ class Tree
 
     int _NumLeaves(Node node)
     {
-        if (node == null)
-            return 0;
-        if (node.Left == null && node.Right == null)
-            return 1;
+        if (node == null) return 0;
+
+        if (node.Left == null && node.Right == null) return 1;
+
         return _NumLeaves(node.Left) + _NumLeaves(node.Right);
-    }
-
-    public void MirrorImage()
-    {
-        _MirrorImage(Root);
-    }
-    void _MirrorImage(Node node)
-    {
-        if (node != null)
-        {
-            Node temp = node.Left;
-            node.Left = node.Right;
-            node.Right = temp;
-            _MirrorImage(node.Left);
-            _MirrorImage(node.Right);
-        }
-    }
-
-    public void TreeCopy()
-    {
-        Node newTree = _TreeCopy(Root);
-        _InOrder(newTree);
-    }
-    Node _TreeCopy(Node node)
-    {
-        if (node != null)
-            return new Node() { Data = node.Data, Left = _TreeCopy(node.Left), Right = _TreeCopy(node.Right) };
-        else
-            return null;
     }
 
     public bool FindNode(int data)
@@ -331,7 +302,9 @@ class Tree
             }
             temp.Right = node.Right;
             newNode = node.Left;
-        }
+        }+ +
+
+        
 
         //Case B: pull out the left most node of the right subtree of node to be deleted and point left subtree to the left
         // of that node, this element just next to current element
