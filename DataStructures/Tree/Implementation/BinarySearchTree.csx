@@ -302,9 +302,9 @@ class Tree
             }
             temp.Right = node.Right;
             newNode = node.Left;
-        }+ +
+        }
 
-        
+
 
         //Case B: pull out the left most node of the right subtree of node to be deleted and point left subtree to the left
         // of that node, this element just next to current element
