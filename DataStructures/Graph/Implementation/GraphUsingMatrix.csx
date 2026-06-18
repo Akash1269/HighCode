@@ -45,13 +45,7 @@ class GraphMatrix
 
     public GraphMatrix(int _n, int[][] edges)
     {
-        n = _n;
-        matrix = new int[n][];
-
-        for (int i = 0; i < n; i++)
-        {
-            matrix[i] = new int[n];
-        }
+        Intialize(_n);
 
         foreach (int[] edge in edges)
         {
@@ -62,6 +56,11 @@ class GraphMatrix
     }
 
     public GraphMatrix(int _n)
+    {
+        Intialize(_n);
+    }
+
+    public void Intialize(int _n)
     {
         n = _n;
         matrix = new int[n][];
@@ -211,7 +210,7 @@ class GraphMatrix
             if (!visited[neighbor] && matrix[current][neighbor] == 1)
             {
                 bool found = DFSFind(neighbor, find, visited);
-                if (found) 
+                if (found)
                     return true;
             }
         }
@@ -222,7 +221,7 @@ class GraphMatrix
     private bool BFSFind(int current, int find, bool[] visited)
     {
         Queue<int> q = new Queue<int>();
-        
+
         if (!visited[current])
         {
             q.Enqueue(current);
@@ -232,7 +231,7 @@ class GraphMatrix
         while (q.Count > 0)
         {
             int node = q.Dequeue();
-            if(node == find) return true;
+            if (node == find) return true;
 
             for (int neighbor = 0; neighbor < n; neighbor++)
             {
@@ -250,19 +249,21 @@ class GraphMatrix
     public bool HasPath(int v1, int v2)
     {
         bool[] visited = new bool[n];
-        
+
         // return DFSFind(v1, v2, visited);
 
         return BFSFind(v1, v2, visited);
     }
 
-    public int CountConnectedComponents() {
+    public int CountConnectedComponents()
+    {
         bool[] visited = new bool[n];
         int count = 0;
 
         for (int start = 0; start < n; start++)
         {
-            if (!visited[start]) {
+            if (!visited[start])
+            {
                 DFSVisit(start, visited, new List<int>());
                 count++;
             }
@@ -271,22 +272,25 @@ class GraphMatrix
         return count;
     }
 
-    public bool IsConnected() {
+    public bool IsConnected()
+    {
         return CountConnectedComponents() == 1;
     }
 
-    public int NodeCount() {
+    public int NodeCount()
+    {
         return n;
     }
 
-    public int EdgeCount() {
+    public int EdgeCount()
+    {
         int count = 0;
 
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < n; j++)
             {
-                if(matrix[i][j] == 1)
+                if (matrix[i][j] == 1)
                     count++;
             }
         }
