@@ -1,6 +1,8 @@
 // Graph Implementation using Adjacency List (Node-based)
 // ------------------------
 // #graph
+// Note: In this implementation, node data == node index (id).
+//       All search/path APIs use node index/id values in range 0..n-1.
 //
 // Public Functions:
 //   Constructors:
@@ -19,6 +21,15 @@
 //   - DFSFromNode(v)                : DFS starting from node with value v
 //   - BFS()                         : Breadth-first traversal of all nodes (handles disconnected)
 //   - BFSFromNode(v)                : BFS starting from node with value v
+//
+//   Path & Connectivity:
+//   - HasPath(u, v)                 : Check if any path exists between two nodes
+//   - IsConnected()                 : True if the whole graph is one component
+//   - CountConnectedComponents()    : Number of connected components
+//
+//   Properties:
+//   - NodesCount()                  : Number of nodes in the graph
+//   - EdgeCount()                   : Number of edges (undirected edges counted twice in current implementation)
 //
 //   Display:
 //   - Print()                       : Print each node with its neighbor list
@@ -49,12 +60,12 @@ class GraphList
 
     public GraphList(int _n)
     {
-        Intialize(_n);
+        Initialize(_n);
     }
 
     public GraphList(int _n, int[][] edges)
     {
-        Intialize(_n);
+        Initialize(_n);
         for (int i = 0; i < edges.Length; i++)
         {
             AddEdge(edges[i][0], edges[i][1]);
@@ -103,9 +114,9 @@ class GraphList
         if (v >= n) return new List<int>();
 
         List<int> result = new List<int>();
-        foreach (var neigbor in nodes[v].neighbors)
+        foreach (var neighbor in nodes[v].neighbors)
         {
-            result.Add(neigbor.data);
+            result.Add(neighbor.data);
         }
 
         return result;
@@ -150,11 +161,29 @@ class GraphList
         visited[current.data] = true;
         result.Add(current.data);
 
-        foreach (Node neigbor in current.neighbors)
+        foreach (Node neighbor in current.neighbors)
         {
-            if (!visited[neigbor.data])
-                DFSVisit(neigbor, visited, result);
+            if (!visited[neighbor.data])
+                DFSVisit(neighbor, visited, result);
         }
+    }
+
+    private bool DFSFind(int u, int v, bool[] visited)
+    {
+        Node node = nodes[u];
+        visited[node.data] = true;
+        if (node.data == v) return true;
+
+        foreach (Node neighbor in node.neighbors)
+        {
+            if (!visited[neighbor.data])
+            {
+                bool found = DFSFind(neighbor.data, v, visited);
+                if (found) return true;
+            }
+        }
+
+        return false;
     }
 
     public List<int> BFS()
@@ -207,6 +236,80 @@ class GraphList
         }
     }
 
+    private bool BFSFind(int u, int v, bool[] visited)
+    {
+        Queue<Node> queue = new Queue<Node>();
+        Node node = nodes[u];
+        queue.Enqueue(node);
+        visited[node.data] = true;
+
+        while (queue.Count > 0)
+        {
+            Node current = queue.Dequeue();
+            if (current.data == nodes[v].data) return true;
+
+            foreach (Node neighbor in current.neighbors)
+            {
+                if (!visited[neighbor.data])
+                {
+                    queue.Enqueue(neighbor);
+                    visited[neighbor.data] = true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool HasPath(int u, int v)
+    {
+        bool[] visited = new bool[n];
+        return BFSFind(u, v, visited);
+        // return DFSFind(u, v, visited);
+    }
+
+    public bool IsConnected()
+    {
+        return CountConnectedComponents() == 1;
+    }
+
+    public int CountConnectedComponents()
+    {
+        bool[] visited = new bool[n];
+        var result = new List<int>();
+        int count = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            Node node = nodes[i];
+            if (!visited[node.data])
+            {
+                DFSVisit(node, visited, result);
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public int NodeCount()
+    {
+        return n;
+    }
+
+    public int EdgeCount()
+    {
+        int count = 0;
+        for (int i = 0; i < n; i++)
+        {
+            Node node = nodes[i];
+            count += node.neighbors.Count;
+        }
+
+        // divide by 2 for undirected graph
+        return count / 2;
+    }
+
     public void Print()
     {
         Console.WriteLine("Printing Graph");
@@ -230,6 +333,25 @@ public void ManageGraphList()
     int[][] edges = new int[][] { [0, 1], [0, 4], [1, 3], [4, 3] };
     var graph = new GraphList(n, edges);
 
+    // Console.WriteLine("Nodes count - {0}", graph.NodeCount());
+    // Console.WriteLine("Edges count - {0}", graph.EdgeCount());
+
+    bool hasPath;
+    hasPath = graph.HasPath(0, 4);
+    Console.WriteLine("Has Path ? 0 to 4 - {0}", hasPath);
+    hasPath = graph.HasPath(2, 3);
+    Console.WriteLine("Has Path ? 2 to 3 - {0}", hasPath);
+    hasPath = graph.HasPath(1, 3);
+    Console.WriteLine("Has Path ? 1 to 3 - {0}", hasPath);
+
+    // Console.WriteLine("Is Connected - {0}", graph.IsConnected());
+    // Console.WriteLine("No of Connected components - {0}", graph.CountConnectedComponents());
+
+    // graph.AddEdge(2, 1);
+
+    // Console.WriteLine("Is Connected - {0}", graph.IsConnected());
+    // Console.WriteLine("No of Connected components - {0}", graph.CountConnectedComponents());
+
     graph.Print();
     List<int> list;
     // list = graph.DFS();
@@ -244,14 +366,14 @@ public void ManageGraphList()
     // list = graph.BFSFromNode(0);
     // Console.WriteLine("BFS From Node - {0}", string.Join(", ", list));
 
-    graph.RemoveEdge(4, 3);
-    graph.AddEdge(2, 1);
-    graph.Print();
+    // graph.RemoveEdge(4, 3);
+    // graph.AddEdge(2, 1);
+    // graph.Print();
 
-    Console.WriteLine("Degree of Node - {0}", graph.GetDegree(1));
+    // Console.WriteLine("Degree of Node - {0}", graph.GetDegree(1));
 
-    list = graph.GetNeighbours(2);
-    Console.WriteLine("Neighbors of Node - {0}", string.Join(", ", list));
+    // list = graph.GetNeighbours(2);
+    // Console.WriteLine("Neighbors of Node - {0}", string.Join(", ", list));
 
     // graph.Print();
     // graph.RemoveEdge(4, 0);
