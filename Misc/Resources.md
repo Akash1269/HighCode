@@ -24,6 +24,10 @@ LinkedIn Graph Playlist - https://leetcode.com/discuss/post/5757797/solved-all-g
 
 Leet code Top 75 curated -  https://www.teamblind.com/post/new-year-gift-curated-list-of-top-75-leetcode-questions-to-save-your-time-oam1oreu
 
+Algorithms Abdul bari - https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O
+
+Striver youtube DS Algo - https://www.youtube.com/@takeUforward
+
 CS 50
 
 https://cs50.harvard.edu/x/notes/1/
