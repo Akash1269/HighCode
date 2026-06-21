@@ -143,6 +143,28 @@ dotnet script Arrays/TwoSum.csx
 | [ZigZagLevelTraverse.csx](Tree/ZigZagLevelTraverse.csx) | Return zigzag level order traversal | `#zigzag` `#bfs` `#queue` `#tree` |
 | [ReplaceCousinsSum.csx](Tree/ReplaceCousinsSum.csx) | Replace node values with sum of all cousins' values | `#tree` `#recursive` `#bfs` |
 | [BSTSearch.csx](Tree/BSTSearch.csx) | Find node in BST and return subtree | `#bst` `#recursive` `#dfs` |
+| [BSTCopy.csx](Tree/BSTCopy.csx) | Create copy of a binary tree or tree | `#bst` `#tree` |
+| [BSTDeleteNode.csx](Tree/BSTDeleteNode.csx) | Delete a node in BST with key, maintain BST order | `#bst` |
+| [BSTMirror.csx](Tree/BSTMirror.csx) | Create mirror image of tree | `#bst` `#tree` |
+
+---
+
+## Graph
+
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [GraphUsingList.csx](Graph/Implementation/GraphUsingList.csx) | Graph implementation using adjacency list (node-based) | `#graph` `#implementation` |
+| [GraphUsingMatrix.csx](Graph/Implementation/GraphUsingMatrix.csx) | Graph implementation using adjacency matrix | `#graph` `#implementation` |
+
+### Problems
+
+| File | Question | Tags |
+|---|---|---|
+| [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx) | Find the number of connected provinces (connected components) using BFS/DFS | `#graph` `#dfs` `#bfs` |
+| [PathToCity.csx](Graph/PathToCity.csx) | Find the minimum number of edges to reverse so every node has a path to node 0 | `#dfs` `#tree` |
+| [VisitRoomsWithKeys.csx](Graph/VisitRoomsWithKeys.csx) | Return true if you can visit all rooms given keys found in each room | `#graph` `#dfs` |
 
 ---
 
@@ -163,12 +185,12 @@ dotnet script Arrays/TwoSum.csx
 | `#matrix` | EqualRowColPairsMatrics |
 | `#stack` | RemoveStarFromString, AstroidCollision, DecodeString, StackUsingArray, StackUsingList |
 | `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, MaxDepthToLeaf |
-| `#tree` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, MinDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, BSTSearch |
-| `#bst` | BinarySearchTree, BSTSearch |
-| `#dfs` | GoodNodesCount, MaxDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, AreTwoNodesCousins, BSTSearch |
-| `#bfs` | MaxDepthToLeaf, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum |
+| `#tree` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, MinDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, BSTSearch, [BSTCopy.csx](Tree/BSTCopy.csx), [BSTMirror.csx](Tree/BSTMirror.csx), [PathToCity.csx](Graph/PathToCity.csx) |
+| `#bst` | BinarySearchTree, BSTSearch, [BSTCopy.csx](Tree/BSTCopy.csx), [BSTDeleteNode.csx](Tree/BSTDeleteNode.csx), [BSTMirror.csx](Tree/BSTMirror.csx) |
+| `#dfs` | GoodNodesCount, MaxDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, AreTwoNodesCousins, BSTSearch, [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx), [PathToCity.csx](Graph/PathToCity.csx), [VisitRoomsWithKeys.csx](Graph/VisitRoomsWithKeys.csx) |
+| `#bfs` | MaxDepthToLeaf, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx) |
 | `#recursive` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, AreTwoNodesCousins, ReplaceCousinsSum, BSTSearch |
-| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList |
+| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList, [GraphUsingList.csx](Graph/Implementation/GraphUsingList.csx), [GraphUsingMatrix.csx](Graph/Implementation/GraphUsingMatrix.csx) |
 | `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum, CircularLinkedList, DoublyLinkedList |
 | `#lca` | LCAOfTwoNodes |
 | `#circular` | CircularLinkedList |
@@ -177,3 +199,4 @@ dotnet script Arrays/TwoSum.csx
 | `#reverse` | LinkedListOperations |
 | `#recursion` | MinDepthToLeaf |
 | `#zigzag` | ZigZagLevelTraverse |
+| `#graph` | [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx), [VisitRoomsWithKeys.csx](Graph/VisitRoomsWithKeys.csx), [GraphUsingList.csx](Graph/Implementation/GraphUsingList.csx), [GraphUsingMatrix.csx](Graph/Implementation/GraphUsingMatrix.csx) |
