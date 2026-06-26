@@ -233,3 +233,51 @@ Ask yourself:
 2. Do I need to **search** for arbitrary elements? → **No, use BST or HashMap**
 3. Do I need **sorted order** of all elements? → **Sort the array or use BST**
 4. Is the data **streaming** (elements arrive one by one)? → **Heap handles this naturally**
+
+---
+
+## Applied In
+
+### Pattern 1 — Maintain a Running Max/Min
+
+| File | Notes |
+|---|---|
+| [SmallestInfiniteSet.csx](SmallestInfiniteSet.csx) | Min-heap + HashSet to track smallest available number; optimized by tracking a `smallest` boundary |
+
+### Pattern 2 — Top-K / Kth Element
+
+| File | Notes |
+|---|---|
+| [KthLargest.csx](KthLargest.csx) | Min-heap of size k — root is the kth largest element |
+| [KthLargestStream.csx](KthLargestStream.csx) | Same min-heap-of-size-k technique applied to a stream with repeated `add()` calls |
+
+### Pattern 4 — Greedy Scheduling / Resource Allocation
+
+| File | Notes |
+|---|---|
+| [CostOfHiringKWorkers.csx](CostOfHiringKWorkers.csx) | Two min-heaps (left/right candidates) — greedily pick cheapest worker each round |
+| [MaxSubsequenceScore.csx](MaxSubsequenceScore.csx) | Sort by one dimension, then use min-heap of size k to maintain best sum while iterating |
+
+---
+
+## Difficulty Progression
+
+| File | Difficulty | Pattern(s) |
+|---|---|---|
+| [KthLargest.csx](KthLargest.csx) | Medium | Top-K |
+| [KthLargestStream.csx](KthLargestStream.csx) | Easy | Top-K |
+| [SmallestInfiniteSet.csx](SmallestInfiniteSet.csx) | Medium | Maintain Running Min |
+| [CostOfHiringKWorkers.csx](CostOfHiringKWorkers.csx) | Medium | Greedy Scheduling |
+| [MaxSubsequenceScore.csx](MaxSubsequenceScore.csx) | Hard | Greedy Scheduling, Top-K |
+
+---
+
+## Quick Reference
+
+| Cue / Signal | Pattern | Example File |
+|---|---|---|
+| "Kth largest/smallest element" | Top-K | KthLargest.csx |
+| "Stream of data + return kth element on each add" | Top-K (streaming) | KthLargestStream.csx |
+| "Choose k items to minimize cost / maximize score" | Greedy Scheduling | CostOfHiringKWorkers.csx |
+| "Maximize product of sum × minimum" | Greedy + Sort + Heap | MaxSubsequenceScore.csx |
+| "Pop smallest / add back with duplicates" | Running Min + HashSet | SmallestInfiniteSet.csx |

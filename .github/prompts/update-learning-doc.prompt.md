@@ -1,5 +1,5 @@
 ---
-description: Update an existing learning doc with newly added files
+description: Update an existing learning doc for perticular data strucutre with newly added files
 agent: agent
 ---
 

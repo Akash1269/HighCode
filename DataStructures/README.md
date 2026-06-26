@@ -149,6 +149,26 @@ dotnet script Arrays/TwoSum.csx
 
 ---
 
+## Heaps
+
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [Heap.csx](Heaps/Implementation/Heap.csx) | Max heap implementation with insert, delete, extract, heapify, and heap sort | `#heap` `#implementation` |
+
+### Problems
+
+| File | Question | Tags |
+|---|---|---|
+| [KthLargest.csx](Heaps/KthLargest.csx) | Given an integer array nums and an integer k, return the kth largest element in the array (without sorting) | `#priorityQueue` `#heap` |
+| [KthLargestStream.csx](Heaps/KthLargestStream.csx) | Define Kth largest in a stream of integers, where on insert return kth largest at that point | `#heap` |
+| [MaxSubsequenceScore.csx](Heaps/MaxSubsequenceScore.csx) | Choose exactly k indices from nums1 and nums2 to maximize (sum of chosen nums1 values) × (minimum chosen nums2 value) | `#heap` `#sort` |
+| [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx) | SmallestInfiniteSet | `#priorityQueue` `#heap` `#hashSet` |
+| [CostOfHiringKWorkers.csx](Heaps/CostOfHiringKWorkers.csx) | Given array of workers with their cost, choose k workers picking one lowest-cost worker per round from first or last x candidates | `#heap` |
+
+---
+
 ## Graph
 
 ### Implementation
@@ -200,3 +220,7 @@ dotnet script Arrays/TwoSum.csx
 | `#recursion` | MinDepthToLeaf |
 | `#zigzag` | ZigZagLevelTraverse |
 | `#graph` | [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx), [VisitRoomsWithKeys.csx](Graph/VisitRoomsWithKeys.csx), [GraphUsingList.csx](Graph/Implementation/GraphUsingList.csx), [GraphUsingMatrix.csx](Graph/Implementation/GraphUsingMatrix.csx) |
+| `#heap` | [Heap.csx](Heaps/Implementation/Heap.csx), [KthLargest.csx](Heaps/KthLargest.csx), [KthLargestStream.csx](Heaps/KthLargestStream.csx), [MaxSubsequenceScore.csx](Heaps/MaxSubsequenceScore.csx), [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx), [CostOfHiringKWorkers.csx](Heaps/CostOfHiringKWorkers.csx) |
+| `#priorityQueue` | [KthLargest.csx](Heaps/KthLargest.csx), [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx) |
+| `#sort` | [MaxSubsequenceScore.csx](Heaps/MaxSubsequenceScore.csx) |
+| `#hashSet` | [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx) |
