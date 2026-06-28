@@ -23,7 +23,9 @@ DataStructures/          — Core DS implementations & problems
 ├── PriorityQueue/       — Heap concepts & priority queue theory
 └── README.md            — Full file index with tags
 
-Algorithms/              — Algorithm implementations (planned)
+Algorithms/              — Algorithm implementations
+├── Princeton/           — Princeton Algorithms I: Union-Find, Sorting, Heaps
+│   └── Documents/       — Course PDF slides
 Documents/               — Tag reference
 Legacy/                  — Older C implementations (linked list, stack, queue, BST)
 Misc/                    — Notes, books, miscellaneous scripts
