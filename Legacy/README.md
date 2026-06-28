@@ -1,8 +1,10 @@
-# Legacy — Data Structures in C
+# Legacy — Data Structures in C & Java
 
-Classic data structure implementations written in C as part of a DSPD (Data Structures & Program Design) course. Each file is self-contained with its own `main()` and interactive menu.
+Classic data structure implementations and CTCI (Cracking the Coding Interview) problems.
 
-## Files
+## C Files
+
+Each file is self-contained with its own `main()` and interactive menu.
 
 | File | Data Structure | Description |
 |---|---|---|
@@ -13,6 +15,37 @@ Classic data structure implementations written in C as part of a DSPD (Data Stru
 | [StackUsingArray.c](StackUsingArray.c) | Stack (Array) | Fixed-size array stack with push/pop |
 | [StackUsingLinkedList.c](StackUsingLinkedList.c) | Stack (Linked List) | Linked list-based stack with push/pop |
 | [LinkedListStudents/](LinkedListStudents/) | Linked List (Multi-file) | Student records database with set operations |
+
+## Java — CTCI Problems
+
+Self-contained Java files runnable with `java FileName.java` (Java 11+). Each file starts with `// Question -` and includes tags.
+
+### Arrays & Strings
+
+| File | Problem | Tags |
+|---|---|---|
+| [IsUniqueChars.java](DataStructuresInJava/ArraysAndStrings/IsUniqueChars.java) | All unique characters check | #string #hashset |
+| [IsPermutation.java](DataStructuresInJava/ArraysAndStrings/IsPermutation.java) | Check if one string is permutation of another | #string #hashmap |
+| [URLify.java](DataStructuresInJava/ArraysAndStrings/URLify.java) | Replace spaces with %20 in-place | #string #two-pointer |
+| [PalindromePermutation.java](DataStructuresInJava/ArraysAndStrings/PalindromePermutation.java) | Check if string is permutation of a palindrome | #string #hashmap |
+| [OneEditAway.java](DataStructuresInJava/ArraysAndStrings/OneEditAway.java) | Check if strings differ by one edit | #string #two-pointer |
+| [StringCompression.java](DataStructuresInJava/ArraysAndStrings/StringCompression.java) | Run-length compression | #string |
+| [RotateMatrix.java](DataStructuresInJava/ArraysAndStrings/RotateMatrix.java) | Rotate NxN matrix 90° in-place | #matrix #array |
+| [ZeroMatrix.java](DataStructuresInJava/ArraysAndStrings/ZeroMatrix.java) | Zero out row/column on zero element | #matrix #array |
+| [StringRotation.java](DataStructuresInJava/ArraysAndStrings/StringRotation.java) | Check if string is rotation of another | #string |
+
+### Linked Lists
+
+| File | Problem | Tags |
+|---|---|---|
+| [RemoveDuplicates.java](DataStructuresInJava/LinkedLists/RemoveDuplicates.java) | Remove duplicates from unsorted list | #linked-list #hashset |
+| [KthToLastNode.java](DataStructuresInJava/LinkedLists/KthToLastNode.java) | Return kth to last element | #linked-list #two-pointer |
+| [DeleteMiddleNode.java](DataStructuresInJava/LinkedLists/DeleteMiddleNode.java) | Delete node given only access to it | #linked-list #in-place |
+| [PartitionList.java](DataStructuresInJava/LinkedLists/PartitionList.java) | Partition list around a value | #linked-list #partition |
+| [AddTwoNumbers.java](DataStructuresInJava/LinkedLists/AddTwoNumbers.java) | Add numbers as linked lists | #linked-list #recursion |
+| [LinkedListPalindrome.java](DataStructuresInJava/LinkedLists/LinkedListPalindrome.java) | Check if list is palindrome | #linked-list #stack |
+| [ListIntersection.java](DataStructuresInJava/LinkedLists/ListIntersection.java) | Find intersection of two lists | #linked-list #two-pointer |
+| [DetectLoop.java](DataStructuresInJava/LinkedLists/DetectLoop.java) | Find start of loop (Floyd's) | #linked-list #cycle-detection |
 | [ArraryLibrary/](ArraryLibrary/) | Array (Multi-file) | Library management system with set operations |
 
 ## BinarySearchTree.c
