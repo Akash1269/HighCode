@@ -188,6 +188,35 @@ dotnet script Arrays/TwoSum.csx
 
 ---
 
+## Binary Search
+
+### Problems
+
+| File | Question | Tags |
+|---|---|---|
+| [EatBananasInHours.csx](../Algorithms/BinarySearch/EatBananasInHours.csx) | Find minimum eating speed k such that all banana piles are eaten within h hours | `#binarySearch` |
+| [GuessNumber.csx](../Algorithms/BinarySearch/GuessNumber.csx) | Given number n and chosen number x, guess the number x from range 1 to n | `#binarySearch` |
+| [PeakElement.csx](../Algorithms/BinarySearch/PeakElement.csx) | Find a peak element (strictly greater than its neighbors) and return its index | `#binarySearch` |
+| [SuccessfulSpellsAndPotions.csx](../Algorithms/BinarySearch/SuccessfulSpellsAndPotions.csx) | Return array where pairs[i] = number of potions where spells[i] * potions[j] >= success | `#binarySearch` |
+
+---
+
+## Princeton
+
+### Implementation
+
+| File | Description | Tags |
+|---|---|---|
+| [AdvancedSorts.csx](../Algorithms/Princeton/AdvancedSorts.csx) | Advanced Sorting: Merge Sort, Quick Sort, Heap Sort, Quick Select | `#sorting` `#merge-sort` `#quick-sort` `#heap-sort` `#quick-select` `#princeton` |
+| [BinaryHeap.csx](../Algorithms/Princeton/BinaryHeap.csx) | Binary Heap (Max Priority Queue) | `#heap` `#priority-queue` `#princeton` |
+| [ElementarySorts.csx](../Algorithms/Princeton/ElementarySorts.csx) | Elementary Sorting: Bubble, Selection, Insertion, Shell Sort | `#sorting` `#bubble-sort` `#selection-sort` `#insertion-sort` `#shell-sort` `#princeton` |
+| [GenericArrayList.csx](../Algorithms/Princeton/GenericArrayList.csx) | Resizable Generic Array List (Dynamic Array) | `#array` `#generics` `#princeton` |
+| [QuickFind.csx](../Algorithms/Princeton/QuickFind.csx) | Union Find: Quick Find (Eager Approach) | `#union-find` `#array` `#princeton` |
+| [QuickUnion.csx](../Algorithms/Princeton/QuickUnion.csx) | Union Find: Quick Union (Lazy Approach) | `#union-find` `#tree` `#princeton` |
+| [WeightedQuickUnion.csx](../Algorithms/Princeton/WeightedQuickUnion.csx) | Union Find: Weighted Quick Union with Path Compression | `#union-find` `#tree` `#path-compression` `#princeton` |
+
+---
+
 ## Tag Index
 
 | Tag | Files |
@@ -205,12 +234,12 @@ dotnet script Arrays/TwoSum.csx
 | `#matrix` | EqualRowColPairsMatrics |
 | `#stack` | RemoveStarFromString, AstroidCollision, DecodeString, StackUsingArray, StackUsingList |
 | `#queue` | Dota2Senator, RecentCall, QueueUsingArray, QueueUsingList, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, MaxDepthToLeaf |
-| `#tree` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, MinDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, BSTSearch, [BSTCopy.csx](Tree/BSTCopy.csx), [BSTMirror.csx](Tree/BSTMirror.csx), [PathToCity.csx](Graph/PathToCity.csx) |
-| `#bst` | BinarySearchTree, BSTSearch, [BSTCopy.csx](Tree/BSTCopy.csx), [BSTDeleteNode.csx](Tree/BSTDeleteNode.csx), [BSTMirror.csx](Tree/BSTMirror.csx) |
-| `#dfs` | GoodNodesCount, MaxDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, AreTwoNodesCousins, BSTSearch, [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx), [PathToCity.csx](Graph/PathToCity.csx), [VisitRoomsWithKeys.csx](Graph/VisitRoomsWithKeys.csx) |
-| `#bfs` | MaxDepthToLeaf, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx) |
+| `#tree` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, MinDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, BSTSearch, BSTCopy, BSTMirror, PathToCity, QuickUnion, WeightedQuickUnion |
+| `#bst` | BinarySearchTree, BSTSearch, BSTCopy, BSTDeleteNode, BSTMirror |
+| `#dfs` | GoodNodesCount, MaxDepthToLeaf, PathToLeafSum, PathSumList, AnyPathSumList, LCAOfTwoNodes, ZigZagPathMaxLength, AreTwoNodesCousins, BSTSearch, ConnectedProvinces, PathToCity, VisitRoomsWithKeys |
+| `#bfs` | MaxDepthToLeaf, BinarySearchTree, AreTwoNodesCousins, AvgOfLevels, LevelOrderTraverse, LevelOrderBottomUpTraverse, MaxSumLevel, ZigZagLevelTraverse, ReplaceCousinsSum, ConnectedProvinces |
 | `#recursive` | GoodNodesCount, SimilarLeavesTrees, MaxDepthToLeaf, AreTwoNodesCousins, ReplaceCousinsSum, BSTSearch |
-| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList, [GraphUsingList.csx](Graph/Implementation/GraphUsingList.csx), [GraphUsingMatrix.csx](Graph/Implementation/GraphUsingMatrix.csx) |
+| `#implementation` | StackUsingArray, StackUsingList, QueueUsingArray, QueueUsingList, BinarySearchTree, CircularLinkedList, DoublyLinkedList, GraphUsingList, GraphUsingMatrix |
 | `#linkedList` | LinkedList, LinkedListOperations, LinkedListReverse, DeleteMiddleNode, OddEvenSeperated, TwinListSum, CircularLinkedList, DoublyLinkedList |
 | `#lca` | LCAOfTwoNodes |
 | `#circular` | CircularLinkedList |
@@ -219,8 +248,23 @@ dotnet script Arrays/TwoSum.csx
 | `#reverse` | LinkedListOperations |
 | `#recursion` | MinDepthToLeaf |
 | `#zigzag` | ZigZagLevelTraverse |
-| `#graph` | [ConnectedProvinces.csx](Graph/ConnectedProvinces.csx), [VisitRoomsWithKeys.csx](Graph/VisitRoomsWithKeys.csx), [GraphUsingList.csx](Graph/Implementation/GraphUsingList.csx), [GraphUsingMatrix.csx](Graph/Implementation/GraphUsingMatrix.csx) |
-| `#heap` | [Heap.csx](Heaps/Implementation/Heap.csx), [KthLargest.csx](Heaps/KthLargest.csx), [KthLargestStream.csx](Heaps/KthLargestStream.csx), [MaxSubsequenceScore.csx](Heaps/MaxSubsequenceScore.csx), [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx), [CostOfHiringKWorkers.csx](Heaps/CostOfHiringKWorkers.csx) |
-| `#priorityQueue` | [KthLargest.csx](Heaps/KthLargest.csx), [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx) |
-| `#sort` | [MaxSubsequenceScore.csx](Heaps/MaxSubsequenceScore.csx) |
-| `#hashSet` | [SmallestInfiniteSet.csx](Heaps/SmallestInfiniteSet.csx) |
+| `#graph` | ConnectedProvinces, VisitRoomsWithKeys, GraphUsingList, GraphUsingMatrix |
+| `#heap` | Heap, KthLargest, KthLargestStream, MaxSubsequenceScore, SmallestInfiniteSet, CostOfHiringKWorkers, BinaryHeap |
+| `#priorityQueue` | KthLargest, SmallestInfiniteSet |
+| `#sort` | MaxSubsequenceScore |
+| `#hashSet` | SmallestInfiniteSet |
+| `#binarySearch` | EatBananasInHours, GuessNumber, PeakElement, SuccessfulSpellsAndPotions |
+| `#sorting` | AdvancedSorts, ElementarySorts |
+| `#merge-sort` | AdvancedSorts |
+| `#quick-sort` | AdvancedSorts |
+| `#heap-sort` | AdvancedSorts |
+| `#quick-select` | AdvancedSorts |
+| `#princeton` | AdvancedSorts, BinaryHeap, ElementarySorts, GenericArrayList, QuickFind, QuickUnion, WeightedQuickUnion |
+| `#priority-queue` | BinaryHeap |
+| `#bubble-sort` | ElementarySorts |
+| `#selection-sort` | ElementarySorts |
+| `#insertion-sort` | ElementarySorts |
+| `#shell-sort` | ElementarySorts |
+| `#generics` | GenericArrayList |
+| `#union-find` | QuickFind, QuickUnion, WeightedQuickUnion |
+| `#path-compression` | WeightedQuickUnion |
